@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-LOCAL_APPS = ["users.apps.UsersConfig"]
+LOCAL_APPS = ["users.apps.UsersConfig","games.apps.GamesConfig"]
 THIRD_PARTY_APPS = ["rest_framework",]
 
 INSTALLED_APPS = [
