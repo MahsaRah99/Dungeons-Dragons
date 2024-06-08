@@ -29,8 +29,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-LOCAL_APPS = ["users.apps.UsersConfig","games.apps.GamesConfig"]
-THIRD_PARTY_APPS = ["rest_framework",]
+LOCAL_APPS = ["users.apps.UsersConfig", "games.apps.GamesConfig"]
+THIRD_PARTY_APPS = ["rest_framework", "rest_framework.authtoken"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -125,3 +125,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "users.User"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.TokenAuthentication",
+    ),
+}
