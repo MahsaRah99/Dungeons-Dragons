@@ -17,12 +17,13 @@ Welcome to the Dungeons & Dragons project, a Django Rest Framework application d
 To get started with the D&D Game API, you'll need to clone the repository and install the necessary dependencies.
 
 ```
-git clone 
-cd 
+git clone https://github.com/MahsaRah99/Dungeons-Dragons.git
+cd Dungeons-Dragons
 pip install -r requirements.txt
 ```
 Next, set up your database and run migrations:
 ```
+python manage.py makemigrations
 python manage.py migrate
 ```
 Finally, start the development server:
